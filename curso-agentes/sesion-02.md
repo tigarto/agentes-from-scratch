@@ -130,8 +130,11 @@ Modelos disponibles:
 ### Google (Gemini)
 
 ```bash
-pip install google-generativeai python-dotenv
+pip install google-genai python-dotenv
 ```
+
+> ⚠️ **Nota:** El paquete `google-generativeai` está deprecado y ya no recibe actualizaciones.
+> Usar siempre `google-genai` (nuevo SDK oficial).
 
 **Obtener API Key:** [aistudio.google.com](https://aistudio.google.com) → Get API Key
 
@@ -140,6 +143,12 @@ Modelos disponibles:
 |---|---|---|
 | Gemini 2.0 Flash | `gemini-2.0-flash` | Rápido y barato, pruebas |
 | Gemini 2.5 Pro | `gemini-2.5-pro-preview-03-25` | Máxima capacidad |
+
+> ⚠️ **Error 429 - Quota Exhausted (free tier):** Si ves este error con `gemini-2.0-flash`,
+> significa que el free tier de tu proyecto alcanzó su límite.
+> Opciones:
+> - Esperar al reset diario (medianoche hora del servidor de Google)
+> - Habilitar billing en [console.cloud.google.com](https://console.cloud.google.com) (tiene capa gratuita generosa)
 
 ---
 
@@ -230,16 +239,18 @@ print(response.choices[0].message.content)
 
 ```python
 # codigo/sesion-02/test_conexion.py
-import google.generativeai as genai
+from google import genai
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
 
-model = genai.GenerativeModel("gemini-2.0-flash")
-response = model.generate_content("Di 'conexión exitosa' y nada más.")
+response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents="Di 'conexión exitosa' y nada más."
+)
 
 print(response.text)
 ```
