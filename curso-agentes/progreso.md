@@ -3,7 +3,7 @@
 | Sesión | Tema | Estado | Fecha | Notas |
 |--------|------|--------|-------|-------|
 | 1 | ¿Qué es un Agente de IA? | ✅ Completada | 2026-03-28 | Test: 4.5/5 |
-| 2 | Entorno de desarrollo | ⬜ Pendiente | | |
+| 2 | Entorno de desarrollo | 🔄 En curso | 2026-03-28 | Pendiente: verificar conexión (cuota Gemini agotada, probar Groq) |
 | 3 | Primer agente con LLM | ⬜ Pendiente | | |
 | 4 | Tools / Function Calling | ⬜ Pendiente | | |
 | 5 | Memoria en agentes | ⬜ Pendiente | | |
