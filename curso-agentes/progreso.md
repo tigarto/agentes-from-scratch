@@ -2,7 +2,7 @@
 
 | Sesión | Tema | Estado | Fecha | Notas |
 |--------|------|--------|-------|-------|
-| 1 | ¿Qué es un Agente de IA? | 🔄 En curso | 2026-03-28 | |
+| 1 | ¿Qué es un Agente de IA? | ✅ Completada | 2026-03-28 | Test: 4.5/5 |
 | 2 | Entorno de desarrollo | ⬜ Pendiente | | |
 | 3 | Primer agente con LLM | ⬜ Pendiente | | |
 | 4 | Tools / Function Calling | ⬜ Pendiente | | |
