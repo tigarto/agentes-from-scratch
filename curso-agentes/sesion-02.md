@@ -108,6 +108,9 @@ Modelos disponibles:
 | Claude Sonnet 4.6 | `claude-sonnet-4-6` | Equilibrio calidad/costo |
 | Claude Opus 4.6 | `claude-opus-4-6` | Máxima capacidad |
 
+> [!TIP]
+> **¿Por dónde empezar?** Compra $5 de créditos en [console.anthropic.com](https://console.anthropic.com) y usa `claude-haiku-4-5-20251001`. Con $5 puedes hacer cientos de pruebas. No compres más hasta que sepas qué vas a construir.
+
 ---
 
 ### OpenAI (GPT)
@@ -124,6 +127,9 @@ Modelos disponibles:
 | GPT-4o mini | `gpt-4o-mini` | Rápido y barato, pruebas |
 | GPT-4o | `gpt-4o` | Equilibrio calidad/costo |
 | o3 | `o3` | Razonamiento avanzado |
+
+> [!TIP]
+> **¿Por dónde empezar?** Compra $5 de créditos en [platform.openai.com](https://platform.openai.com) y usa `gpt-4o-mini`. Es el modelo más barato y suficiente para aprender.
 
 ---
 
@@ -144,11 +150,10 @@ Modelos disponibles:
 | Gemini 2.0 Flash | `gemini-2.0-flash` | Rápido y barato, pruebas |
 | Gemini 2.5 Pro | `gemini-2.5-pro-preview-03-25` | Máxima capacidad |
 
-> ⚠️ **Error 429 - Quota Exhausted (free tier):** Si ves este error con `gemini-2.0-flash`,
-> significa que el free tier de tu proyecto alcanzó su límite.
-> Opciones:
-> - Esperar al reset diario (medianoche hora del servidor de Google)
-> - Habilitar billing en [console.cloud.google.com](https://console.cloud.google.com) (tiene capa gratuita generosa)
+> [!CAUTION]
+> **Error 429 - Quota Exhausted (free tier):** Si ves este error con `limit: 0`, el tier gratuito de tu proyecto no está disponible, lo cual puede ocurrir por restricciones de región en Colombia y Latinoamérica. Opciones:
+> - Usar Groq como alternativa gratuita sin restricciones
+> - Habilitar billing en [console.cloud.google.com](https://console.cloud.google.com)
 
 ---
 
@@ -166,6 +171,9 @@ Modelos disponibles:
 |---|---|---|
 | DeepSeek Chat | `deepseek-chat` | Uso general |
 | DeepSeek Reasoner | `deepseek-reasoner` | Razonamiento / cadena de pensamiento |
+
+> [!TIP]
+> **¿Por dónde empezar?** DeepSeek regala créditos al registrarte. Úsalos primero antes de comprar. Es una de las opciones más baratas del mercado si los créditos gratis se agotan.
 
 ---
 
@@ -327,6 +335,33 @@ quadrantChart
     Gemini Pro: [0.60, 0.88]
     Claude Opus: [0.85, 0.95]
 ```
+
+---
+
+## 9. Tips para quien empieza
+
+> [!TIP]
+> **No gastes plata hasta que lo necesites.**
+> Groq y otros proveedores gratuitos son más que suficientes para aprender. Invierte en una API de pago solo cuando vayas a construir algo real.
+
+> [!TIP]
+> **Una key a la vez.**
+> No intentes configurar todos los proveedores al mismo tiempo. Elige uno, haz que funcione, y avanza.
+
+> [!WARNING]
+> **El `.env` es sagrado.**
+> Nunca lo subas al repo. Ni una vez. Ni "solo para probar". Configura el `.gitignore` antes de escribir la primera línea de código.
+
+> [!NOTE]
+> **Los errores 403 y 429 son normales.**
+> Significan permisos o cuota, no que tu código esté mal. Lee el mensaje de error con calma, casi siempre te dice exactamente qué hacer.
+
+> [!TIP]
+> **El código es casi idéntico entre proveedores.**
+> Si aprendes con Groq, cambiar a Claude o GPT después es solo cambiar 3 líneas. No te preocupes por "elegir el proveedor correcto" ahora.
+
+> [!CAUTION]
+> **Colombia y Latinoamérica:** Algunos tiers gratuitos de Google/Gemini pueden tener restricciones de región. Si te da error de cuota con `limit: 0`, usa Groq directamente.
 
 ---
 
